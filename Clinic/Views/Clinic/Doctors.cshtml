@@ -1,0 +1,23 @@
+﻿@using Clinic.ViewModels.Clinic
+@model DoctorsViewModel
+
+<table class="table">
+    <tr>
+        <th>Doctor</th>
+        <th>Specialization</th>
+        <th>Order Visit</th>
+    </tr>
+
+    @foreach (var doctor in Model.Doctors)
+    {
+        <tr>
+            <th>@doctor.Name</th>
+            <th>@doctor.Specialization.Name</th>
+            <th>
+                @Html.ActionLink("Order Visit", "Visits", "Clinic", new { doctorId = @doctor.Id }, new { @class = "text-decoration-none btn btn-info" })
+            </th>
+        </tr>
+    }
+
+</table>
+

@@ -6,16 +6,24 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Clinic.Models;
+using Clinic.Services;
+using Microsoft.AspNetCore.Identity;
+using Clinic.Repositories;
+using Clinic.Repositories.Interfaces;
 
 namespace Clinic.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly HomeService _homeService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(UserManager<AppUser> userManager, ILogger<HomeController> logger,
+            HomeService homeService, IUserRepository userRepository) 
+            : base(userManager, userRepository)
         {
             _logger = logger;
+            _homeService = homeService;
         }
 
         public IActionResult Index()
@@ -32,6 +40,15 @@ namespace Clinic.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult MyVisits()
+        {
+            var result = _homeService.GetMyVisitsViewModel(GetLoggedUser());
+            if (!result.Success)
+                return ErrorPage();
+
+            return View(result.Data);
         }
     }
 }

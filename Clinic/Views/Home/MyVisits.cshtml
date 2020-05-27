@@ -1,0 +1,31 @@
+﻿@using Clinic.ViewModels.Home
+@model MyVisitsViewModel
+
+<h1>My Visits</h1>
+
+
+<table class="table">
+    <tr>
+        <th>Clinic</th>
+        <th>Doctor</th>
+        <th>Specialization</th>
+        <th>Date</th>
+        <th>Delete Visit</th>
+
+    </tr>
+
+    @foreach (var visit in Model.Visits)
+    {
+        <tr>
+            <th>@visit.Doctor.Clinic.Name</th>
+            <th>@visit.Doctor.Name</th>
+            <th>@visit.Doctor.Specialization.Name</th>
+            <th>@visit.Time</th>
+            <th>
+                @Html.ActionLink("Delete Visit", "DeleteVisit", "Clinic", new { visitId = @visit.Id }, new { @class = "text-decoration-none btn btn-danger" })
+            </th>
+
+        </tr>
+    }
+
+</table>
