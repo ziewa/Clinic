@@ -10,16 +10,18 @@ using Clinic.Services;
 using Microsoft.AspNetCore.Identity;
 using Clinic.Repositories;
 using Clinic.Repositories.Interfaces;
+using Clinic.Services.Interfaces;
+using Clinic.ViewModels;
 
 namespace Clinic.Controllers
 {
     public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly HomeService _homeService;
+        private readonly IHomeService _homeService;
 
         public HomeController(UserManager<AppUser> userManager, ILogger<HomeController> logger,
-            HomeService homeService, IUserRepository userRepository) 
+            IHomeService homeService, IUserRepository userRepository) 
             : base(userManager, userRepository)
         {
             _logger = logger;

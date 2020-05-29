@@ -13,18 +13,21 @@ using Microsoft.Extensions.Logging;
 using Clinic.Models;
 using Clinic.Services;
 using Clinic.ViewModels.Account;
+using Clinic.Services.Interfaces;
+using Clinic.Repositories.Interfaces;
 
 namespace Clinic.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
 
-        private readonly AccountService AccountService;
+        private readonly IAccountService _accountService;
         private readonly ILogger Logger;
 
-        public AccountController(AccountService accountService, ILogger<AccountController> logger)
+        public AccountController(IAccountService accountService, ILogger<AccountController> logger,
+            UserManager<AppUser> userManager, IUserRepository userRepository) : base(userManager, userRepository)
         {
-            AccountService = accountService;
+            _accountService = accountService;
             Logger = logger;
 
         }
@@ -42,7 +45,7 @@ namespace Clinic.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await AccountService.RegisterNewUser(model);
+                var result = await _accountService.RegisterNewUser(model);
                 if (!result.Succeeded)
                     AddErrors(result);
                 else
@@ -70,7 +73,7 @@ namespace Clinic.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await AccountService.Login(model);
+                var result = await _accountService.Login(model);
                 if (result.Succeeded)
                 {
                     Logger.LogInformation("User logged in.");
@@ -96,7 +99,7 @@ namespace Clinic.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Logout()
         {
-            AccountService.Logout();
+            _accountService.Logout();
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 

@@ -1,5 +1,6 @@
 ﻿using Clinic.Data;
 using Clinic.Models;
+using Clinic.Services.Interfaces;
 using Clinic.Services.ServiceResponses;
 using Clinic.ViewModels.Clinic;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Clinic.Services
 {
-    public class ClinicService : BaseService
+    public class ClinicService : BaseService, IClinicService
     {
         private readonly ApplicationDbContext _context;
 

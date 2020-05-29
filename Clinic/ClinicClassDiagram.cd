@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Clinic.Controllers.AccountController">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAIAAAAAAAAAAAIAAAABAAAAAAAQAAAgAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_accountService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Clinic.Controllers.BaseController">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAIAAA=</HashCode>
+      <FileName>Controllers\BaseController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="UserRepository" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Clinic.Controllers.ClinicController">
+    <Position X="9.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAACAAAAAQAAAgEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ClinicController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_clinicService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Clinic.Controllers.HomeController">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAEAAAAAIAAAAQAAAgEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_homeService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Clinic.Services.AccountService">
+    <Position X="20.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAACAAAAAAAAAAAAgAAIAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Services\AccountService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Clinic.Services.BaseService">
+    <Position X="18.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\BaseService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.Services.ClinicService">
+    <Position X="16.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAQAQAQEAAAAAIAA=</HashCode>
+      <FileName>Services\ClinicService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Clinic.Services.HomeService">
+    <Position X="18.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Services\HomeService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Clinic.ViewModels.Account.LoginViewModel">
+    <Position X="20" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAgAAA=</HashCode>
+      <FileName>ViewModels\Account\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.ViewModels.Account.RegisterViewModel">
+    <Position X="18" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAQAAAAAAIAA=</HashCode>
+      <FileName>ViewModels\Account\RegisterViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.ViewModels.Clinic.ClinicIndexViewModel">
+    <Position X="10" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Clinic\ClinicIndexViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.ViewModels.Clinic.DoctorsViewModel">
+    <Position X="11.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Clinic\DoctorsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.ViewModels.Clinic.VisitsViewModel">
+    <Position X="8.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Clinic\VisitsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.ViewModels.Home.MyVisitsViewModel">
+    <Position X="16" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Home\MyVisitsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.ViewModels.ErrorViewModel">
+    <Position X="14" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ErrorViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.Models.Address" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAIAAAAAAAAAEIAAAABAAIAAAAAAAA=</HashCode>
+      <FileName>Models\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.Models.AppRole" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AppRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.Models.AppUser" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAg=</HashCode>
+      <FileName>Models\AppUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.Models.Clinic" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Clinic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.Models.Doctor" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAAAQAAAAAgAAQAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Models\Doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.Models.Specialization" Collapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Specialization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic.Models.Visit" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAAAAAACAAQAAAAAAAAACQA=</HashCode>
+      <FileName>Models\Visit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Clinic.Repositories.Interfaces.IUserRepository">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Interfaces\IUserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Clinic.Services.Interfaces.IAccountService">
+    <Position X="13.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Services\Interfaces\IAccountService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Clinic.Services.Interfaces.IClinicService">
+    <Position X="14.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAQEAAAAAIAA=</HashCode>
+      <FileName>Services\Interfaces\IClinicService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Clinic.Services.Interfaces.IHomeService">
+    <Position X="7.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Services\Interfaces\IHomeService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -16,6 +16,7 @@ using Clinic.Models;
 using Clinic.Services;
 using Clinic.Repositories.Interfaces;
 using Clinic.Repositories;
+using Clinic.Services.Interfaces;
 
 namespace Clinic
 {
@@ -48,9 +49,9 @@ namespace Clinic
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            services.AddScoped<AccountService>();
-            services.AddScoped<ClinicService>();
-            services.AddScoped<HomeService>();
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IClinicService ,ClinicService>();
+            services.AddScoped<IHomeService, HomeService>();
             services.AddScoped<IUserRepository, UserRepository>();
 
 

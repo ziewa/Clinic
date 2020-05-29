@@ -8,10 +8,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Clinic.Services.Interfaces;
 
 namespace Clinic.Services
 {
-    public class AccountService : BaseService
+    public class AccountService : BaseService, IAccountService
     {
         private readonly UserManager<AppUser> UserManager;
         private readonly SignInManager<AppUser> SignInManager;

@@ -1,5 +1,6 @@
 ﻿using Clinic.Data;
 using Clinic.Models;
+using Clinic.Services.Interfaces;
 using Clinic.Services.ServiceResponses;
 using Clinic.ViewModels.Clinic;
 using Clinic.ViewModels.Home;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Clinic.Services
 {
-    public class HomeService : BaseService
+    public class HomeService : BaseService, IHomeService
     {
         public HomeService(ILogger<HomeService> logger, ApplicationDbContext context) : base(logger, context)
         {

@@ -15,6 +15,7 @@ using Clinic.Services;
 using Clinic.ViewModels.Account;
 using Clinic.Repositories.Interfaces;
 using Clinic.ViewModels.Clinic;
+using Clinic.Services.Interfaces;
 
 namespace Clinic.Controllers
 {
@@ -22,9 +23,9 @@ namespace Clinic.Controllers
     public class ClinicController : BaseController
     {
 
-        private readonly ClinicService _clinicService;
+        private readonly IClinicService _clinicService;
 
-        public ClinicController(ClinicService clinicService, ILogger<ClinicController> logger,
+        public ClinicController(IClinicService clinicService, ILogger<ClinicController> logger,
             UserManager<AppUser> userManager, IUserRepository userRepository) : base(userManager, userRepository)
         {
             _clinicService = clinicService;
