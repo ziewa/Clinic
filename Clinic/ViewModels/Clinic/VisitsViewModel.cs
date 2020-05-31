@@ -10,5 +10,7 @@ namespace Clinic.ViewModels.Clinic
     {
         [Required]
         public int DoctorId { get; set; }
+
+        public string Time { get; set; }
     }
 }
